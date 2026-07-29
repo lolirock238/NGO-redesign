@@ -12,35 +12,106 @@ function Media() {
         <h2>Latest News & Events</h2>
 
         <p>
-          Stay updated with news,
-          events and activities from
-          Kenya NPO Working Group.
+          Stay informed about our latest activities, events,
+          publications and highlights from across Kenya.
         </p>
 
       </div>
 
       <div className="media-grid">
 
-        <div className="media-card">
-          <div className="media-image"></div>
-          <h3>Upcoming Event</h3>
-        </div>
+        <article className="media-card">
 
-        <div className="media-card">
-          <div className="media-image"></div>
-          <h3>Latest News</h3>
-        </div>
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900"
+            alt="Stakeholder Meeting"
+          />
 
-        <div className="media-card">
-          <div className="media-image"></div>
-          <h3>Photo Gallery</h3>
-        </div>
+          <div className="media-content">
+
+            <span>July 2026</span>
+
+            <h3>Stakeholder Consultation Meeting</h3>
+
+            <p>
+              Representatives from civil society and development
+              partners met to discuss strengthening collaboration
+              within Kenya's non-profit sector.
+            </p>
+
+            <Link to="/media" className="media-link">
+              Read More
+            </Link>
+
+          </div>
+
+        </article>
+
+        <article className="media-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900"
+            alt="Workshop"
+          />
+
+          <div className="media-content">
+
+            <span>June 2026</span>
+
+            <h3>Capacity Building Workshop</h3>
+
+            <p>
+              Organizations participated in governance,
+              compliance and leadership training.
+            </p>
+
+            <Link to="/media" className="media-link">
+              Read More
+            </Link>
+
+          </div>
+
+        </article>
+
+        <article className="media-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=900"
+            alt="Conference"
+          />
+
+          <div className="media-content">
+
+            <span>May 2026</span>
+
+            <h3>Regional Partnership Conference</h3>
+
+            <p>
+              Development partners explored opportunities
+              for future collaboration across Kenya.
+            </p>
+
+            <Link to="/media" className="media-link">
+              Read More
+            </Link>
+
+          </div>
+
+        </article>
 
       </div>
 
-      <Link className="section-btn" to="/media">
-        View Media
-      </Link>
+      <div className="media-buttons">
+
+        <Link to="/media" className="media-btn">
+          View All News
+        </Link>
+
+        <Link to="/media" className="media-btn-outline">
+          View Gallery
+        </Link>
+
+      </div>
 
     </section>
   );

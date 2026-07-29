@@ -1,31 +1,151 @@
-.join-us{
-    padding:90px 8%;
-    background:#0b7a43;
-    color:white;
-    text-align:center;
+.join-us {
+  padding: 100px 0;
+  background: #f8faf8;
 }
 
-.join-container{
-    max-width:800px;
-    margin:auto;
+.join-header {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto 70px;
+  text-align: center;
 }
 
-.join-container h2{
-    font-size:2.3rem;
-    margin-bottom:20px;
+.join-header span {
+  color: #0b7a43;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: .9rem;
 }
 
-.join-container p{
-    line-height:1.8;
-    margin-bottom:35px;
+.join-header h2 {
+  margin: 20px 0;
+  font-size: clamp(2rem,4vw,3rem);
+  color: #1d1d1d;
 }
 
-.section-btn{
-    display:inline-block;
-    text-decoration:none;
-    background:white;
-    color:#0b7a43;
-    padding:14px 30px;
-    border-radius:8px;
-    font-weight:600;
+.join-header p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.join-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+}
+
+.join-info,
+.message-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.join-info h3,
+.message-card h3 {
+  color: #0b7a43;
+  margin-bottom: 20px;
+}
+
+.join-info p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.contact-details {
+  margin: 35px 0;
+}
+
+.detail {
+  margin-bottom: 25px;
+}
+
+.detail h4 {
+  margin-bottom: 8px;
+  color: #0b7a43;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: #0b7a43;
+  color: white;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.contact-btn:hover {
+  background: #075b32;
+}
+
+.message-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.message-card input,
+.message-card textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: .95rem;
+  font-family: inherit;
+}
+
+.message-card textarea {
+  resize: vertical;
+}
+
+.message-card button {
+  background: #0b7a43;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.message-card button:hover {
+  background: #075b32;
+}
+
+@media (max-width: 900px) {
+
+  .join-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+body.dark .join-us {
+  background: #151515;
+}
+
+body.dark .join-info,
+body.dark .message-card {
+  background: #242424;
+}
+
+body.dark .join-header h2,
+body.dark .join-info p,
+body.dark .detail p {
+  color: white;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
 }

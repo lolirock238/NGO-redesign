@@ -7,7 +7,6 @@ import Partner from "../components/Partner/Partner";
 import Resources from "../components/Resources/Resources";
 import Media from "../components/Media/Media";
 import JoinUs from "../components/JoinUs/JoinUs";
-import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 
 function Home() {
@@ -30,8 +29,6 @@ function Home() {
       <Media />
 
       <JoinUs />
-
-      <Contact />
 
       <Footer />
     </>

@@ -1,86 +1,220 @@
-.theme-btn{
+.navbar {
+  width: 100%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
 
-    background:#0b7a43;
 
-    color:white;
+.navbar-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 18px 40px;
 
-    border:none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
 
-    padding:10px 18px;
 
-    border-radius:6px;
+/* Logo */
 
-    cursor:pointer;
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0b7a43;
+  white-space: nowrap;
+}
 
-    transition:.3s;
+
+
+/* Navigation */
+
+nav {
+  flex: 1;
+  display:flex;
+  justify-content:center;
+}
+
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:22px;
+
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+
+.nav-links a {
+
+  text-decoration:none;
+  color:#333;
+
+  font-size:14px;
+  font-weight:600;
+
+  position:relative;
+
+  transition:.3s ease;
+}
+
+
+
+.nav-links a::after {
+
+  content:"";
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:2px;
+
+  background:#0b7a43;
+
+  transition:.3s ease;
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+
+  width:100%;
 
 }
 
-.theme-btn:hover{
 
-    background:#095d32;
 
-}
+.nav-links a.active {
 
-body.dark{
-
-    background:#121212;
-
-    color:#ffffff;
+  color:#0b7a43;
 
 }
 
-body.dark .navbar{
 
-    background:#1b1b1b;
 
-}
+/* Theme toggle */
 
-body.dark .about,
-body.dark .partners{
+.theme-toggle {
 
-    background:#1a1a1a;
+  width:45px;
+  height:24px;
 
-}
+  border:none;
+  border-radius:50px;
 
-body.dark .focus-areas,
-body.dark .contact{
+  background:#0b7a43;
 
-    background:#222222;
+  padding:3px;
 
-}
+  display:flex;
+  align-items:center;
 
-body.dark .footer{
-
-    background:#0f0f0f;
+  cursor:pointer;
 
 }
 
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4{
 
-    color:white;
+.theme-toggle span {
 
-}
+  width:18px;
+  height:18px;
 
-body.dark p{
+  background:white;
 
-    color:#d6d6d6;
+  border-radius:50%;
 
-}
-
-body.dark .focus-card,
-body.dark .partner-card,
-body.dark .contact-card{
-
-    background:#2b2b2b;
+  transition:.3s;
 
 }
 
-body.dark a{
 
-    color:white;
+.theme-toggle.dark span {
+
+  transform:translateX(20px);
+
+}
+
+
+
+
+/* Mobile button */
+
+.menu-btn {
+
+ display:none;
+
+ background:none;
+ border:none;
+
+ font-size:25px;
+
+ cursor:pointer;
+
+}
+
+
+
+
+/* Mobile */
+
+@media(max-width:1000px){
+
+
+.navbar-container{
+
+ padding:15px 20px;
+
+}
+
+
+.menu-btn{
+
+ display:block;
+
+}
+
+
+
+nav{
+
+ position:absolute;
+
+ top:70px;
+ left:0;
+
+ width:100%;
+
+ background:white;
+
+ display:none;
+
+ padding:20px 0;
+
+}
+
+
+nav.nav-open{
+
+ display:block;
+
+}
+
+
+.nav-links{
+
+ flex-direction:column;
+
+ gap:20px;
+
+}
+
 
 }

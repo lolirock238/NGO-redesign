@@ -1,5 +1,4 @@
 import "./Contact.css";
-import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -7,55 +6,118 @@ function Contact() {
 
       <div className="contact-container">
 
-        <div className="contact-info">
+        {/* Contact Form */}
 
-          <span className="section-tag">
-            CONTACT US
-          </span>
+        <div className="contact-form">
 
-          <h2>Let's Work Together</h2>
+          <h2>Send Us a Message</h2>
 
           <p>
-            Whether you're a non-profit organization,
-            development partner, donor, or stakeholder,
-            we'd love to hear from you and explore
-            opportunities for collaboration.
+            We'd love to hear from you. Fill out the form below and
+            our team will get back to you as soon as possible.
           </p>
 
-          <div className="contact-details">
+          <form>
 
-            <div className="detail">
-              <h4>Email</h4>
-              <p>info@npoworkinggroup.or.ke</p>
-            </div>
+            <input
+              type="text"
+              placeholder="Full Name"
+            />
 
-            <div className="detail">
-              <h4>Phone</h4>
-              <p>+254 XXX XXX XXX</p>
-            </div>
+            <input
+              type="email"
+              placeholder="Email Address"
+            />
 
-            <div className="detail">
-              <h4>Location</h4>
-              <p>Nairobi, Kenya</p>
-            </div>
+            <input
+              type="text"
+              placeholder="Subject"
+            />
 
-          </div>
+            <textarea
+              rows="6"
+              placeholder="Your Message"
+            ></textarea>
 
-          <Link to="/contact" className="contact-btn">
-            Get in Touch
-          </Link>
+            <button type="submit">
+              Send Message
+            </button>
+
+          </form>
 
         </div>
 
-        <div className="contact-card">
+        {/* Contact Information */}
 
-          <h3>Work With Us</h3>
+        <div className="contact-info">
 
-          <p>
-            We believe collaboration creates stronger
-            communities and a more vibrant civil society.
-            Reach out and let's make an impact together.
-          </p>
+          <h3>Contact Information</h3>
+
+          <div className="detail">
+            <h4>Office Address</h4>
+
+            <p>
+              Kenya NPO Working Group
+              <br />
+              Nairobi, Kenya
+            </p>
+          </div>
+
+          <div className="detail">
+            <h4>Email</h4>
+
+            <p>info@npoworkinggroup.or.ke</p>
+          </div>
+
+          <div className="detail">
+            <h4>Phone</h4>
+
+            <p>+254 XXX XXX XXX</p>
+          </div>
+
+          <div className="detail">
+            <h4>Office Hours</h4>
+
+            <p>
+              Monday – Friday
+              <br />
+              8:00 AM – 5:00 PM
+            </p>
+          </div>
+
+          <div className="social-section">
+
+            <h4>Follow Us</h4>
+
+            <div className="social-links">
+
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                X (Twitter)
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 

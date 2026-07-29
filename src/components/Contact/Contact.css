@@ -1,138 +1,334 @@
 .contact{
     padding:100px 0;
-    background:#f5f7f8;
+    background:linear-gradient(180deg,#f8faf8,#ffffff);
 }
 
 .contact-container{
-
     width:90%;
     max-width:1200px;
-
     margin:auto;
 
     display:grid;
     grid-template-columns:2fr 1fr;
-
     gap:50px;
-
-    align-items:center;
-
 }
 
-.contact-info h2{
+/* Form */
 
-    font-size:2.5rem;
+.contact-form{
+    background:#fff;
+    padding:45px;
+    border-radius:22px;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
 
-    margin:20px 0;
+.contact-form:hover,
+.contact-info:hover{
+    transform:translateY(-5px);
+}
 
+
+.contact-form h2{
+    font-size:2.2rem;
     color:#222;
-
+    margin-bottom:15px;
 }
 
-.contact-info p{
 
+.contact-form p{
+    color:#666;
     line-height:1.8;
+    margin-bottom:30px;
+}
 
-    color:#555;
+
+.contact-form form{
+    display:grid;
+    gap:20px;
+}
+
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    padding:16px;
+
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    font-size:1rem;
+    font-family:inherit;
+
+    outline:none;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+}
+
+
+.contact-form input:hover,
+.contact-form textarea:hover{
+    border-color:#0b7a43;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#0b7a43;
+    box-shadow:0 0 0 3px rgba(11,122,67,.15);
 
 }
 
-.section-tag{
 
-    color:#0b7a43;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
+.contact-form textarea{
+    resize:none;
+    min-height:150px;
 }
 
-.contact-details{
 
-    margin:35px 0;
 
-}
-
-.detail{
-
-    margin-bottom:25px;
-
-}
-
-.detail h4{
-
-    color:#0b7a43;
-
-    margin-bottom:6px;
-
-}
-
-.contact-btn{
-
-    display:inline-block;
-
-    margin-top:15px;
-
-    padding:15px 35px;
+.contact-form button{
 
     background:#0b7a43;
 
     color:white;
 
-    text-decoration:none;
+    border:none;
 
-    border-radius:8px;
+    padding:16px;
+
+    border-radius:50px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
 
     transition:.3s;
 
 }
 
-.contact-btn:hover{
 
-    background:#095d32;
+
+.contact-form button:hover{
+
+    background:#075b32;
+
+    transform:translateY(-3px);
 
 }
 
-.contact-card{
+
+/* Contact Information */
+
+
+.contact-info{
 
     background:white;
 
     padding:40px;
 
-    border-radius:15px;
+    border-radius:22px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    height:max-content;
 
 }
 
-.contact-card h3{
 
-    margin-bottom:20px;
+.contact-info h3{
 
     color:#0b7a43;
 
+    font-size:1.5rem;
+
+    margin-bottom:35px;
+
 }
 
-.contact-card p{
 
-    line-height:1.8;
+
+.detail{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.detail h4{
+
+    color:#0b7a43;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.detail p{
 
     color:#555;
 
+    line-height:1.8;
+
 }
 
+
+
+/* Social */
+
+
+.social-section{
+
+    margin-top:40px;
+
+}
+
+
+
+.social-section h4{
+
+    color:#0b7a43;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.social-links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+
+.social-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#0b7a43;
+
+    padding:11px 20px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+
+
+.social-links a:hover{
+
+    background:#075b32;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* Responsive */
+
+
 @media(max-width:900px){
+
+.contact{
+
+padding:70px 0;
+
+}
+
 
 .contact-container{
 
 grid-template-columns:1fr;
 
+gap:30px;
+
 }
 
+
+.contact-form,
 .contact-info{
 
-text-align:center;
+padding:30px;
 
 }
+
+}
+
+
+
+/* Dark Mode */
+
+
+body.dark .contact{
+
+background:#111;
+
+}
+
+
+
+body.dark .contact-form,
+body.dark .contact-info{
+
+background:#242424;
+
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+
+
+body.dark .contact-form h2{
+
+color:white;
+
+}
+
+
+
+body.dark .contact-form p,
+body.dark .detail p{
+
+color:#ccc;
+
+}
+
+
+
+body.dark .contact-form input,
+body.dark .contact-form textarea{
+
+background:#333;
+
+border:1px solid #555;
+
+color:white;
+
+}
+
+
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder{
+
+color:#aaa;
 
 }

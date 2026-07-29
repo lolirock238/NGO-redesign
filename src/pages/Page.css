@@ -49,3 +49,8 @@ body.dark .page-content p{
 body.dark .page-header{
     background:#095d32;
 }
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
